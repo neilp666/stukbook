@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :username 
-  validates_uniqueness_of :username
+  validates_presence_of :username #makes username exists
+  validates_uniqueness_of :username #makes sure username is unique
   
 end
